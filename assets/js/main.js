@@ -20,7 +20,12 @@ window.onscroll=function()
     headerAnimation(); 
 
 }; 
-    
+
+function sendEmail() 
+{
+    console.log("SEnd EMial");
+    window.location = "mailto:jugsg-organisers@googlegroups.com";
+}
 
 function headerAnimation () {
 
@@ -128,3 +133,76 @@ setInterval(function () {
     secs_span.innerHTML = '<span class="number">' + seconds + '</span>' + '<span class="unit">Secs</span>'; 
  
 }, 1000);
+
+const speakers = [
+    {
+        speaker: "Jai",
+        title : "It is a dummy title",
+        abstract: "Total dummy code",
+        image: "assets/images/speakers/speaker-1.jpg"
+    },
+    {
+        speaker: "Amar",
+        title : "It is a dummy title",
+        abstract: "Total dummy code",
+        image: "assets/images/speakers/speaker-2.jpg"
+    },
+    {
+        speaker: "Michael",
+        title : "It is a dummy title",
+        abstract: "Total dummy code",
+        image: "assets/images/speakers/speaker-3.jpg"
+    },
+    {
+        speaker: "Andrey",
+        title : "It is a dummy title",
+        abstract: "Total dummy code",
+        image: "assets/images/speakers/speaker-4.jpg"
+    }
+];
+
+function updatemodal(idx){
+    console.log(idx);
+    modal1 = bootstrap.Modal.getOrCreateInstance('#modal');
+    let ele = document.getElementById("speaker-img");
+    if(ele){
+        ele.src=speakers[idx].image;
+        document.getElementById("speaker-1-ModalLabel").innerText=speakers[idx].speaker;
+        document.getElementById("speaker-title").innerText=speakers[idx].title;
+        document.getElementById("speaker-abstract").innerText=speakers[idx].abstract;
+    }
+    
+}
+
+function updatemodal2(idx){
+    let ele = document.getElementById("speaker-img-2");
+    // if(ele){
+    //     ele.src=speakers[idx].image;
+    //     document.getElementById("speaker-name-2").innerText=speakers[idx].speaker;
+    //     document.getElementById("speaker-title-2").innerText=speakers[idx].title;
+    //     document.getElementById("speaker-abstract-2").innerText=speakers[idx].abstract;
+    // }
+    
+}
+
+function updatemodal3(idx){
+    let ele = document.getElementById("speaker-img-3");
+    // if(ele){
+    //     ele.src=speakers[idx].image;
+    //     document.getElementById("speaker-name-3").innerText=speakers[idx].speaker;
+    //     document.getElementById("speaker-title-3").innerText=speakers[idx].title;
+    //     document.getElementById("speaker-abstract-3").innerText=speakers[idx].abstract;
+    // }
+    
+}
+
+function updatemodal4(idx){
+    let ele = document.getElementById("speaker-img-4");
+    // if(ele){
+    //     ele.src=speakers[idx].image;
+    //     document.getElementById("speaker-name-4").innerText=speakers[idx].speaker;
+    //     document.getElementById("speaker-title-4").innerText=speakers[idx].title;
+    //     document.getElementById("speaker-abstract-4").innerText=speakers[idx].abstract;
+    // }
+    
+}
